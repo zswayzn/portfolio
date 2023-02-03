@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #f3f4f5;
+    background-size: cover;
+    backdrop-filter: blur(5px);
+    overflow-x: hidden;
+}
+
+header{
+    height: 75vh;
+    width: 100vw;
+    
+    background-size: cover;
+}
+
+.navbar{
+    padding: 20px 50px 50px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.navbar a{
+    color: rgb(54, 67, 77);
+}
+.navbar .logo{
+    font-size: 2em;
+    font-weight: bold;
+    
+}
+
+
+.navbar .nav-links ul{
+    display: flex;
+}
+.navbar .nav-links ul li{
+    margin: 0 25px;
+}
+
+.navbar .nav-links ul  li.active a{
+    color: #f39200;
+    font-weight: 600;
+}
+
+.navbar .menu-hamburger{
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 35px;
+}
+
+.titre{
+    color: rgb(54, 67, 77);
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 30px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #f3f4f5;
+}
+.titre h1 {
+  
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid rgb(54, 67, 77);; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  animation-duration: 10s;
+  animation: 
+    typing  3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+    animation-iteration-count: infinite;
+   
+ 
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 65% }
+
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(54, 67, 77); }
+}
+#portfolio{
+    background-color: rgb(255, 255, 255);
+    
+}
+
+.card-container{
+    display: flex;
+    margin-bottom: 50px;
+}
+.card {
+    width: 400px; /*1*/
+    margin: 0px auto; /*2*/
+    background-color: white; /*3*/
+    box-shadow: 0px 5px 20px #999; /*4*/
+  }
+  .card a { /*5*/
+    color: #333; 
+    text-decoration: none;
+  }
+  .card-title{
+    padding: 5px;
+  }
+  .card:hover .card-image img { /*6*/
+    width: 160%;
+    filter: grayscale(0);
+  }
+
+  .card-image {
+    height: 250px;/*1*/
+    position: relative;/*2*/
+    overflow: hidden;/*3*/
+  }
+  .card-image img {
+    width: 150%;/*4*/
+      /*5 - Méthode de centrage en fonction de la taille de l'image */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: grayscale(1);/*6*/
+      /*7 - Transition */
+    transition-property: filter width; 
+    transition-duration: .3s;
+    transition-timing-function: ease;
+  }
+
+  .card-body {
+    text-align:center;  /*1*/
+  padding: 15px 20px; /*2*/
+  box-sizing: border-box; /*3*/
+}
+
+.card-date {
+  font-family: 'Poppins', sans-serif;
+  }
+.wrap {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .button {padding: 5px;
+    margin-top: 10px;
+    width: 140px;
+    height: 45px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    }
+  
+  .button:hover {
+    background-color: #f39200;
+    box-shadow: 0px 15px 20px rgba(223, 167, 15, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+  .card-title, .card-excerpt {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .card-date, .card-title {
+    text-align:center;
+    text-transform:uppercase;
+    font-weight: bold;
+  }
+  
+  .card-date, .card-excerpt {
+    color: #777;
+  }
+
+.contact{
+  text-align: center;
+  color: #fff;
+  background-color: #65647C;
+}
+.contact h2{
+  margin-top: 250px;
+  position: relative;
+}
+.contact h3{
+  position: relative;
+}
+.contact-list{
+  margin-top: 20px;
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  background-color:#65647C ;
+}
+@media screen and (max-width:900px) {
+
+    .navbar{
+        padding: 0;
+    }
+
+    .navbar .logo{
+        
+        top: 40px;
+        left: 50px;
+    }
+    .navbar .menu-hamburger{
+        display: block;
+    }
+    .nav-links{
+        top: 0;
+        left: 0; 
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.26);
+        backdrop-filter: blur(7px);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition:all 0.5s ease;
+    }
+
+    .nav-links.mobile-menu{
+        margin-left: 0;
+    }
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .nav-links ul li{
+        margin: 25px 0;
+        font-size: 1.2em;
+    }
+
+    .card-container{
+        flex-direction: column;
+    }
+
+    .card{
+        margin: 20px;
+        width: 350px;
+    }
+}
+@media screen and (min-height:600px) {
+  header{
+    height: 50vh;
+  }
+  
+}
+
+
+
+
+
+
+/*ROBOT*/
